@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  // USE STATE ********
+  // USE STATE ********//
 
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
