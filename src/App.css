@@ -1,38 +1,147 @@
-.App {
+:root {
+  --primary-color: #3c36ff;
+  --secondary-color: #d0d1d8;
+  --white: #ffffff;
+  --backround-color: #b7bbc9;
+  --text-color: #505050;
+  --black-color: #000;
+}
+
+/* utilities start */
+
+.btn {
+  cursor: pointer;
+  border: 1px solid var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  margin-top: 40px;
+  width: 86%;
+}
+
+.btn-primary:hover,
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary:focus,
+.btn:focus {
+  outline: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.text-center{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* utilities end */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  height: 10vh ;
+  background-color: var(--primary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.logo{
+  font-size: 18px;
+  color: var(--white);
+  margin-left: 10px;
+
+}
+
+p{
+  color: var(--white);
+  font-size: 24px;
+}
+
+
+.form {
+  background-color: #ffffff;
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input-control {
+  width: 400px;
+  margin-left: 90px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.first-text {
+  text-align: center;
+  margin-top: 60px;
+}
+.label {
+  color: var(--secondary-color);
+  margin: 0px 0px 10px 0px;
+  align-self: start;
+}
+
+.product-container {
+  display: inline-block;
+  background-color: var(--white);
+  width: 350px;
+
+  margin: 50px 20px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  position: relative;
+
+}
+
+.product-container ul li {
+  list-style: none;
+  color: #999;
+  padding: 10px 5px;
+  
+}
+
+.product-text{
+  color: var(--primary-color);
+}
+
+.list-item{
+  display: inline-block;
+  color: var(--text-color);
+}
+
+.err {
+  margin: 0;
+  margin-top: 3px;
+  color: brown;
+}
+
+.delete-btn{
+  position: relative;
+}
+
+i{
+  position: relative;
+  left: 130px ;
+  top: -25px;
+
 }
