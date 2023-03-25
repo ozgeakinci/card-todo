@@ -69,10 +69,7 @@ function App() {
         setErrorColor={setErrorColor}
         handleCreateItem={handleCreateItem}
       />
-      <Card
-        newItems={newItems}
-        handleDelete={handleDelete}
-      />
+      <Card newItems={newItems} handleDelete={handleDelete} />
     </div>
   );
 }

@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const Card = ({newItems, handleDelete}) => {
+const Card = ({ newItems, handleDelete }) => {
   return (
     <div>
-
-       {newItems.map((item) => (
+      {newItems.map((item) => (
         <div className="product-container d-flex" key={item.id}>
           <h2 className="product-text ">Product</h2>
           <i
@@ -29,7 +28,7 @@ const Card = ({newItems, handleDelete}) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
