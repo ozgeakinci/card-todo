@@ -1,6 +1,9 @@
 import React from "react";
 
-const Card = ({ newItems, handleDelete }) => {
+const Card = ({ newItems, setNewItems }) => {
+  const handleDelete = (id) => {
+    setNewItems((preNewItems) => preNewItems.filter((item) => item.id !== id));
+  };
   return (
     <div>
       {newItems.map((item) => (
@@ -8,9 +11,6 @@ const Card = ({ newItems, handleDelete }) => {
           <h2 className="product-text ">Product</h2>
           <i
             className="fa-solid fa-trash"
-            // onClick={() => {
-            //   handleDelete(item.id);
-            // }}
             onClick={() => handleDelete(item.id)}
           ></i>
 
