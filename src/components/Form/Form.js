@@ -7,7 +7,7 @@ const Form = ({ newItems, setNewItems }) => {
   // const [number, setNumber] = useState("");
   // const [color, setColor] = useState("");
 
-  const [user, setUser] = useState({name: '' , number: '', color: ''});
+  const [product, setProduct] = useState({name: '' , number: '', color: ''});
 
   // const [errorName, setErrorName] = useState(false);
   // const [errorNumber, setErrorNumber] = useState(false);
@@ -22,24 +22,24 @@ const Form = ({ newItems, setNewItems }) => {
       //Tıklandığında Error mesajlarının gözükmemesi için false yapıyoruz.
       setError({name: false, number: false, color: false});
     // name, number, color değerleri varsa yeni bir card yarat
-    if (user.name && user.number && user.color) {
+    if (product.name && product.number && product.color) {
       setNewItems([
         ...newItems,
         {
           id: ` ${Date.now()}${Math.floor(Math.random() * 1000)}`,
-         ...user
+         ...product
         },
       ]);
      
-      setUser({name:'', number:'', color: '' })
+      setProduct({name:'', number:'', color: '' })
       
 
       // eğer name, number, color yoksa, error mesajını aktif et
     } 
     else {
-      !user.name && setError((preverr) => ({...preverr, name:true}) )
-      !user.number && setError((preverr) => ({...preverr, number:true}) )
-      !user.color && setError((preverr) => ({...preverr, color:true}))
+      !product.name && setError((preverr) => ({...preverr, name:true}) )
+      !product.number && setError((preverr) => ({...preverr, number:true}) )
+      !product.color && setError((preverr) => ({...preverr, color:true}))
     }
   };
 
@@ -56,11 +56,11 @@ const Form = ({ newItems, setNewItems }) => {
               className="btn"
               id="name"
               //value değeri ile set ettiğimiz name'i bağlıyoruz. Two way binding denilmekte.
-              value={user.name}
+              value={product.name}
               //State üzerinde value değeri girildiğinde set edilen değeri almak için kullanılır.
               onChange={(event) => {
                 event.target.value && setError({...error, name:false});
-                setUser({...user , name: event.target.value});
+                setProduct({...product , name: event.target.value});
               }}
               placeholder="Apple"
             />
@@ -77,10 +77,10 @@ const Form = ({ newItems, setNewItems }) => {
               type="text"
               className="btn"
               id="number"
-              value={user.number}
+              value={product.number}
               onChange={(event) => {
                 event.target.value && setError({...error, number:false});
-                setUser({...user , number: event.target.value});
+                setProduct({...product , number: event.target.value});
               }}
               placeholder="9834834 9335 6464"
             />{" "}
@@ -97,10 +97,10 @@ const Form = ({ newItems, setNewItems }) => {
             type="text"
             className="btn"
             id="color"
-            value={user.color}
+            value={product.color}
             onChange={(event) => {
               event.target.value && setError({...error, color:false});
-              setUser({...user, color:event.target.value});
+              setProduct({...product, color:event.target.value});
             }}
             placeholder="Gray"
           />

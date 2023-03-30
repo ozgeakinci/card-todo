@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ newItems, setNewItems }) => {
+const Cards = ({ newItems, setNewItems }) => {
   const handleDelete = (id) => {
     setNewItems((preNewItems) => preNewItems.filter((item) => item.id !== id));
   };
@@ -31,4 +31,4 @@ const Card = ({ newItems, setNewItems }) => {
   );
 };
 
-export default Card;
+export default Cards;
