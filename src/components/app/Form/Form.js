@@ -12,7 +12,7 @@ const Form = ({ newItems, setNewItems }) => {
     color: true,
   });
 
-  const handleCreateItem = (event) => {
+  const handleCreateProduct = (event) => {
     event.preventDefault();
     //Tıklandığında Error mesajlarının gözükmemesi için false yapıyoruz.
     setIsProductValid({...product });
@@ -56,7 +56,7 @@ const Form = ({ newItems, setNewItems }) => {
               //State üzerinde value değeri girildiğinde set edilen değeri almak için kullanılır.
               onChange={(event) => {
                 event.target.value && setIsProductValid({ ...isProductValid, name: true });
-                setProduct(prevProduct=>({ ...prevProduct, name: event.target.value }));
+                setProduct(prevProduct=>({...prevProduct, name: event.target.value }));
               }}
               placeholder="Apple"
             />
@@ -107,7 +107,7 @@ const Form = ({ newItems, setNewItems }) => {
             className="btn btn-primary"
             type="submit"
             value="Add"
-            onClick={handleCreateItem}
+            onClick={handleCreateProduct}
           />
         </div>
       </form>

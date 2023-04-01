@@ -1,10 +1,10 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Form from "./components/Form/Form";
-import Cards from "./components/Cards/Cards"
+import Header from "./components/shared/Header/Header";
+import Form from "./components/app/Form/Form";
+import ProductList from "./components/app/Product/Product-List/ProductList"
 import { useState } from "react";
 
-function App() {
+const App = () => {
 
   const [newItems, setNewItems] = useState([]);
 
@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <Header listItem={["Home", "About", "Login"]} />
       <Form newItems={newItems} setNewItems={setNewItems}/>
-      <Cards newItems={newItems}  setNewItems={setNewItems}/>
+      <ProductList newItems={newItems} setNewItems={setNewItems}/>
     </div>
   );
 }
