@@ -1,0 +1,28 @@
+{
+  "people": [
+    {
+      "id": "0001",
+      "name": "Okan Akkurt",
+      "course": "Frontend Dev",
+      "instructor": "Orkun Durmaz"
+    },
+    {
+      "id": "0002",
+      "name": "Eralp Nitelik",
+      "course": "Java Boost",
+      "instructor": "Babur Somer"
+    },
+    {
+      "id": "0003",
+      "name": "Firat Can Tas",
+      "course": ".Net Boost",
+      "instructor": "Ridvan Aksoy"
+    },
+    {
+      "id": "0004",
+      "name": "Onurcan Pozan",
+      "course": "React Native",
+      "instructor": "Orkun Durmaz"
+    }
+  ]
+}
