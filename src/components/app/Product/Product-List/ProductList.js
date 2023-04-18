@@ -5,8 +5,8 @@ const ProductList = ({ newItems, setNewItems }) => {
 
   return (
     <div className="product-list">
-      {newItems.map((item) => (
-        <ProductCard item={item} setNewItems={setNewItems} />
+      {newItems.map((item, index) => (
+        <ProductCard item={item} setNewItems={setNewItems} key={index}/>
       ))}
     </div>
   );
